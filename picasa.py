@@ -22,7 +22,6 @@ def auth(email, password):
     gd_client.password = password
     gd_client.source = 'exampleCo-exampleApp-1'
     gd_client.ProgrammaticLogin()
-    #return gd_client
 
 # list of albums
 def listAlbum():
@@ -34,8 +33,7 @@ def listAlbum():
 
 def listPhotos(album_id):
     photos = gd_client.GetFeed(
-          '/data/feed/api/user/%s/albumid/%s?kind=photo' % (
-                    'default', album_id))
+          '/data/feed/api/user/%s/albumid/%s?kind=photo' % ('default', album_id))
     #for photo in photos.entry:
     #    print 'Photo title:', photo.title.text
     return photos
@@ -48,7 +46,6 @@ def addAlbum(name):
 # list of local directories
 def listPhotoDir(source):
     names = []
-    #for root, dirs, files in os.walk(PHOTO_BASE):
     for root, dirs, files in os.walk(source):
         if files:
             #print(root, dirs, files)
