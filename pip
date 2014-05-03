@@ -1,0 +1,4 @@
+Pillow==2.2.1
+argparse==1.2.1
+gdata==2.0.18
+wsgiref==0.1.2
