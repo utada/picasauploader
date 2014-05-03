@@ -150,8 +150,9 @@ if __name__ == '__main__':
                     postPhoto(album_id, root, filename2)
                 else:
                     # upload photo
+                    photo_dir2 = filepath.replace(filename, '')
                     print(" --> upload " + filename)
-                    postPhoto(album_id, root, filename)
+                    postPhoto(album_id, photo_dir2, filename)
                 if os.path.isfile(root + "/" + filename2):
                     os.remove(root + "/" + filename2)
 
