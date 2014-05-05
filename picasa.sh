@@ -2,10 +2,12 @@
 
 source /home/utada/.virtualenvs/picasa/bin/activate
 
-if hostname='utada-i7';then
+hostname=`hostname`
+
+if [[ $hostname = 'utada-i7' ]];then
   user=utada4@gmail.com
   password=megumegu6
-elif hostname='ThinkPad-T400';then
+elif [[ $hostname = 'ThinkPad-T400' ]];then
   user=utada6@gmail.com
   password=sizue9109
 fi
